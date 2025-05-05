@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Basi Tienda Urbana</title>
+    <link rel="stylesheet" href="../css/Stiles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://assets.onecompiler.app/42tpcukdf/42tpctb9g/logoBasi.jpeg" alt="Logo de Basi">
+        </div>
+
+        <h2>Iniciar Sesión</h2>
+
+        <form id="loginForm" action="../files/php/login.php" method="POST" onsubmit="handleLogin(event)">
+            <label for="username">Nombre de Usuario o Correo</label>
+            <input type="text" id="username" name="username" required placeholder="Ingresa tu nombre de usuario o correo">
+        
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+        
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        
+        <div class="return-button">
+            <button onclick="window.location.href='../index.html'">
+                <i class="fas fa-home"></i> Volver al Inicio
+            </button>
+        </div>
+    </div>
+</body>
+</html>

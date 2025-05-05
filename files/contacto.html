@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Basi Tienda Urbana</title>
+    <link rel="stylesheet" href="../css/Stiles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <img src="https://assets.onecompiler.app/42tpcukdf/42tpctb9g/logoBasi.jpeg" alt="Logo de Basi Tienda Urbana">
+            </div>
+        </header>
+        
+        <section class="contact-section">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna duda? Contáctanos por cualquiera de estos medios.</p>
+            
+            <div class="contact-options">
+                <!-- Chat en vivo -->
+                <div class="chat-container">
+                    <h2>Chat en Vivo</h2>
+                    <div class="chat-box" id="chat-box">
+                        <p><strong>Soporte:</strong> ¡Hola! ¿En qué podemos ayudarte?</p>
+                    </div>
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                    <button onclick="sendMessage()">Enviar</button>
+                </div>
+                
+                <!-- Formulario de correo -->
+                <div class="email-container">
+                    <h2>Envíanos un correo</h2>
+                    <form action="php/contacto.php" method="POST" enctype="text/plain">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Teléfono -->
+            <div class="phone-container">
+                <h2>Contacto Telefónico</h2>
+                <p><strong>Teléfono:</strong> <a href="tel:+573204567890">+57 320 456 7890</a></p>
+                <p><strong>Horario:</strong> Lunes a Viernes de 8:00 AM a 6:00 PM</p>
+            </div>
+            
+            <!-- Botón de regreso al inicio -->
+            <div class="return-button">
+                <button onclick="window.location.href='../index.html'">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

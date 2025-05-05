@@ -1,0 +1,696 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, yellow, black);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ======== MENÚ LATERAL ======== */
+.sidebar {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: yellow;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.main-container {
+    margin-left: 230px;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* LOGO CON REALCE */
+.logo img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 10px yellow); /* Brillo amarillo */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* ======== BANNER ======== */
+.banner {
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.5); /* Sombra amarilla */
+}
+
+.banner img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(1.2) drop-shadow(0 0 15px yellow); /* Brillo y sombra amarilla */
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 20px; /* Espaciado entre columnas */
+    color: yellow;
+    padding: 30px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center; /* Centrar el texto */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+/* Contenedores de cada sección */
+.footer-section {
+    padding: 10px;
+}
+
+/* TÍTULOS DEL FOOTER */
+.footer-section h3 {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    color: #ffeb3b; /* Amarillo */
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: white;
+}
+
+/* RESPONSIVE: Para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center;
+    }
+}
+/* ======== SECCIÓN DE BIENVENIDA ======== */
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.5); /* Sombra amarilla */
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* TÍTULO PRINCIPAL */
+.welcome h1 {
+    font-size: 2rem;
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow; /* Brillo amarillo */
+    margin-bottom: 15px;
+}
+
+/* PÁRRAFO DE DESCRIPCIÓN */
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR DE BOTONES */
+.welcome .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ESTILO DE BOTONES */
+.welcome .buttons button {
+    background: yellow;
+    color: black;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+}
+
+/* EFECTO HOVER EN BOTONES */
+.welcome .buttons button:hover {
+    background: black;
+    color: yellow;
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* RESPONSIVE: Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .welcome {
+        padding: 30px 10px;
+    }
+    
+    .welcome .buttons {
+        flex-direction: column; /* Apila los botones */
+    }
+}
+/* ======== SECCIÓN DE CONTACTO ======== */
+.contact-section {
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.contact-section h1 {
+    font-size: 2rem;
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* ======== CONTENEDOR DE OPCIONES DE CONTACTO ======== */
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Distribuye en tres columnas */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ======== ESTILOS GENERALES PARA CADA BLOQUE ======== */
+.chat-container,
+.email-container,
+.phone-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+    text-align: left;
+    margin: 20px 10px; /* Espaciado superior e inferior */
+    
+}
+
+h2 {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* ======== CHAT EN VIVO ======== */
+.chat-box {
+    background: #222;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 100px;
+    color: white;
+    overflow-y: auto;
+    
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: white;
+}
+
+/* ======== FORMULARIO DE CORREO ======== */
+.email-container label {
+    display: block;
+    margin-top: 6px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+   
+}
+
+.email-container input,
+.email-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    background: #333;
+    color: white;
+}
+
+/* ======== CONTACTO TELEFÓNICO ======== */
+.phone-container p {
+    font-size: 1.1rem;
+   
+}
+
+.phone-container a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.phone-container a:hover {
+    color: white;
+}
+
+/* ======== BOTÓN DE REGRESO ======== */
+.return-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.return-button button {
+    background: yellow;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.return-button button:hover {
+    background: black;
+    color: yellow;
+}
+/* ======== CONTAINER ======== */
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+/* ======== TÍTULO INICIAR SESIÓN ======== */
+.container h2 {
+    color: yellow;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* ======== BOTÓN DE REGRESO ======== */
+.return-button {
+    margin-top: 20px;
+}
+
+.return-button button {
+    background: yellow;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.return-button button:hover {
+    background: black;
+    color: yellow;
+}
+/* ======== INPUTS ======== */
+form input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+/* ======== BOTÓN DE INICIO DE SESIÓN ======== */
+form button {
+    background: yellow;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background: black;
+    color: yellow;
+}
+/* Contenedor principal */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.5);
+    text-align: center;
+}
+
+/* Estilos para los formularios */
+.form-container {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 5px rgba(255, 255, 0, 0.3);
+}
+
+/* Títulos de los formularios */
+.form-container h2 {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos generales para etiquetas */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Inputs y textarea */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Botones de los formularios */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: white;
+    color: black;
+}
+
+/* Botón de retorno */
+.return-button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.return-button button {
+    background: transparent;
+    border: 2px solid yellow;
+    padding: 10px 15px;
+    color: yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.return-button button:hover {
+    background: yellow;
+    color: black;
+}
+
+/* Enlace de alternativa */
+.alternative {
+    margin-top: 15px;
+}
+
+.alternative a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.alternative a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Estilos para las opciones dentro de los select */
+select option {
+    font-size: 16px;
+    background-color: #ffeb3b; /* Fondo blanco para mejor visibilidad */
+    color: #000; /* Color de texto oscuro */
+    padding: 10px;
+}
+
+/* Estilo para la opción seleccionada y opciones deshabilitadas */
+select option:disabled {
+    color: #000;
+    font-style: italic;
+    background-color: #f0f0f0;
+}
+
+/* Estilo cuando el usuario pasa el mouse sobre una opción */
+select option:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Mantiene la coherencia con los estilos previos */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f8f9fa;
+    color: #ffeb3b;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    appearance: none;
+}
+
+/* Personalización de la flecha del select */
+select {
+    background: url('https://cdn-icons-png.flaticon.com/512/25/25623.png') no-repeat right 15px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+/* Efecto al enfocar */
+select:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+    background: #ffffff;
+}
+button[type="submit"] {
+    background-color: #ffeb3b; /* Azul corporativo */
+    color: #000; /* Texto blanco */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Ajuste de tamaño */
+    max-width: 300px; /* Máximo tamaño para no expandirse demasiado */
+    display: block;
+    margin: 20px auto; /* Centrado */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.05); /* Ligero efecto de agrandamiento */
+}
+
+button[type="submit"]:active {
+    background-color: #004494; /* Azul aún más oscuro al hacer clic */
+    transform: scale(0.98); /* Efecto de presión */
+}
+/* Estilos generales para el formulario */
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para cada checkbox y su campo de texto asociado */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Mostrar el campo de texto cuando el checkbox esté marcado */
+.checkbox-group input[type="checkbox"]:checked ~ input[type="text"] {
+    display: block;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* letra QUIENES SOMOS */
+.about-section {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.4);
+    max-width: 900px;
+    margin: 40px auto;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.about-section h1 {
+    color: yellow;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px yellow;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about-section strong {
+    color: yellow;
+}
+
+
+  
+        
+
+
+
+
